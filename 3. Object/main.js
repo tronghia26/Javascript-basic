@@ -55,3 +55,13 @@ console.log(student.averageScores());
 student.getAge2();
 // xuất thử tuổi thông qua thuộc tính age mới đc thêm từ phương thức getAge2
 console.log(student.age);
+
+// THêm xóa thuộc tính
+student.email = "lqtnghia2602@gmail.com";
+student["website"] = "https://nghiahocjs.com";
+console.log(student.email);
+console.log(student.website);
+delete student.email;
+student["website"] = "https:/tuhocjs.com";
+console.log(student.email);
+console.log(student.website);
