@@ -76,3 +76,29 @@ console.log(connectA);
 var stringName = "jason";
 var chars = [...stringName];
 console.log(chars);
+
+// 14. sort(...)  nếu không truyền hàm tham số sẽ sort theo unicode |||khi function trả về < 0 a trc b, = 0 thì giữ nguyên > 0 thì b trước a
+var a3 = [5, 6, 1, 8, 9, 2];
+// sort tăng dần
+var sortedA3 = a3.sort((a, b) => a - b);
+
+// 15. reduce(fucntion, [initialValue]) tính toán rồi trả về một giá trị duy nhất sau tính toán
+/*accumulator: giá trị tích lũy, được cập nhật sau mỗi lần gọi hàm
+  currentValue: giá trị hiện tại đang xử lý trong mảng.
+  currentIndex: (tùy chọn) chỉ số của phần tử đang xử lý.
+  array: (tùy chọn) mảng đang được reduce*/
+var N1 = [3, 2, 3];
+var sumN1 = N1.reduce(
+  // Tham số thứ nhất: function
+  (accumulator, currentValue, currentIndex, array) => {
+    return accumulator + currentValue;
+  },
+  // Tham số thứ 2: initalValue
+  0
+);
+
+// 16. filter()
+
+var newNumbers = [1, 2, 3, 4, 5, 6, 7];
+var evenNumbers = newNumbers.filter((value) => value % 2 == 0);
+console.log(evenNumbers);
