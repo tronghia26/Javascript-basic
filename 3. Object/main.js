@@ -65,3 +65,30 @@ delete student.email;
 student["website"] = "https:/tuhocjs.com";
 console.log(student.email);
 console.log(student.website);
+
+// 1. object.key  ---- 2. object.value ----- 3. object.entries ----- object.assign(target,source): sao chép các thuộc tính từ source vào target
+var keys = Object.keys(student);
+console.log(keys);
+var values = Object.values(student);
+console.log(values);
+var entries = Object.entries(student);
+console.log(entries);
+// 4. object.assign
+var target = { c: 100 };
+var source1 = { a: 1 };
+var source2 = { b: 2 };
+Object.assign(target, source1, source2);
+console.log(target);
+// 5. Object.hasOwnProperty(prop)
+var persion = {
+  name: "nghĩa",
+  age: 20,
+};
+console.log(persion.hasOwnProperty("name")); // true
+// 6. Object.freeze : đóng băng đối tương, làm đối tượng không thể thêm xóa sửa
+Object.freeze(persion);
+persion.email = "lqtnghia2602@gmail.com";
+console.log(persion.email);
+delete persion.name;
+console.log(persion.name);
+// 7. Object.seal : ngắn 0 cho thêm xóa, chỉ cho sửa
