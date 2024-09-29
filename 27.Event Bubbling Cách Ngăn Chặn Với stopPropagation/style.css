@@ -1,0 +1,15 @@
+div {
+  border: 2px solid red;
+}
+#grandparent {
+  width: 90vw;
+  background-color: white;
+}
+#parent {
+  width: 70vw;
+  background-color: cyan;
+}
+#child {
+  width: 50vw;
+  background-color: yellow;
+}
