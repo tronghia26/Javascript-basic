@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  background-color: aqua;
+  color: blue;
+  border-radius: 50px;
+  max-width: 80vw;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+body {
+  background-image: linear-gradient(90deg, #8067f1, #6d56d2);
+}
+.parent {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  cursor: pointer;
+  background-color: pink;
+  border-radius: 10px;
+  border: 1px solid purple;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  position: relative;
+  overflow: hidden;
+}
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
